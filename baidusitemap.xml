@@ -4,6 +4,21 @@
 
     
   <url>
+    <loc>http://BJQi.github.io/2018/10/11/Web-API/</loc>
+    <lastmod>2018-10-10T23:27:28.809Z</lastmod>
+    <data>
+        <display>
+        <title>Web API</title>
+        <pubTime>2018-10-10T23:21:32.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://BJQi.github.io/2018/09/17/%E9%9A%8F%E7%AC%94/</loc>
     <lastmod>2018-09-18T08:01:56.027Z</lastmod>
     <data>
@@ -18,19 +33,4 @@
     </url>
 
     
-    
-  <url>
-    <loc>http://BJQi.github.io/2018/09/13/hello-world/</loc>
-    <lastmod>2017-10-28T00:39:58.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hello World</title>
-        <pubTime>2018-09-13T12:02:05.416Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
 </urlset>

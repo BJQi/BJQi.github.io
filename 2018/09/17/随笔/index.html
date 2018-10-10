@@ -73,56 +73,6 @@
         <p class="header-subtitle">--任凭雨注，总有天晴--</p>
         
         
-            <form>
-                <input type="text" class="st-default-search-input search" id="local-search-input" placeholder="搜索一下" autocomplete="off">
-            </form>
-            <div id="local-search-result"></div>
-        
-        
-            <script type="text/javascript">
-                (function() {
-                    'use strict';
-                    function getMatchData(keyword, data) {
-                        var matchData = [];
-                        for(var i =0;i<data.length;i++){
-                            if(data[i].title.toLowerCase().indexOf(keyword)>=0) 
-                                matchData.push(data[i])
-                        }
-                        return matchData;
-                    }
-                    var $input = $('#local-search-input');
-                    var $resultContent = $('#local-search-result');
-                    $input.keyup(function(){
-                        $.ajax({
-                            url: '/search.json',
-                            dataType: "json",
-                            success: function( json ) {
-                                var str='<ul class=\"search-result-list\">';                
-                                var keyword = $input.val().trim().toLowerCase();
-                                $resultContent.innerHTML = "";
-                                if ($input.val().trim().length <= 0) {
-                                    $resultContent.empty();
-                                    $('#switch-area').show();
-                                    return;
-                                }
-                                var results = getMatchData(keyword, json);
-                                if(results.length === 0){
-                                    $resultContent.empty();
-                                    $('#switch-area').show();
-                                    return;
-                                } 
-                                for(var i =0; i<results.length; i++){
-                                    str += "<li><a href='"+ results[i].url +"' class='search-result-title'>"+ results[i].title +"</a></li>";
-                                }
-                                str += "</ul>";
-                                $resultContent.empty();
-                                $resultContent.append(str);
-                                $('#switch-area').hide();
-                            }
-                        });
-                    });
-                })();
-            </script>
         
         
             <div id="switch-btn" class="switch-btn">
@@ -327,11 +277,15 @@
 
 <nav id="article-nav">
   
-  
-    <a  href="/2018/09/13/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
-      <strong class="article-nav-caption">></strong>
+    <a  href="/2018/10/11/Web-API/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Web API
+        
+      </div>
     </a>
+  
   
 </nav>
 
@@ -397,16 +351,21 @@
 
 
     
-        <section class="changyan" id="comments">
-  <!--<div id="uyan_frame"></div>-->
-  <div id="SOHUCS"></div>
-  <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js"></script>
-  <script type="text/javascript">
-    window.changyan.api.config({
-      appid: 'cytOtSTCl',
-      conf: 'prod_90e0598ef0bc842be55eb1c30ae9fe1f'
-    });
-  </script>
+        <section id="comments">
+<link rel="stylesheet" href="/css/gitment.min.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: '流浪者', // 可选。默认为 location.href
+  owner: 'BJQi',
+  repo: 'BJQi.github.io',
+  oauth: {
+    client_id: 'e7964f60119637e37cff',
+    client_secret: '44d148021ed6d13791db10e38149e1cf890cd2bf',
+  },
+})
+gitment.render('comments')
+</script>
 </section>
     
 
@@ -414,16 +373,16 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a  href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a  href="/2018/10/11/Web-API/" title="上一篇: Web API">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a  href="/2018/09/13/hello-world/" title="下一篇: Hello World">
-                <i class="fa fa-angle-right"></i>
-            </a>
+            <a  href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
     </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/09/17/随笔/">流浪者</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/13/hello-world/">Hello World</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/10/11/Web-API/">Web API</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/17/随笔/">流浪者</a></li></ul>
     
 <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
 
