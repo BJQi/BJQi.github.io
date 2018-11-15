@@ -1,0 +1,52 @@
+/*内外边距为0*/
+/* @media (max-width:960px){
+	.left_con{width:58%;}
+	.right_con{width:38%;}
+} */
+*{
+	margin:0;
+	padding:0;
+	font-family: "Microsoft Yahei";
+}
+/*默认下划线*/
+a{
+	text-decoration:none;
+}
+/*默认字体倾斜*/
+em{
+	font-style:normal;
+}
+h1,h2,h3,h4,h5,h6{
+	font-size:100%;
+}
+ul{
+	list-style:none;
+}
+img{
+	border:none;
+}
+/* 鼠标 小手事件 */
+.hands{
+	cursor: pointer;
+}
+/*清除浮动目的:让图片可撑起父级元素边框;*/
+.clearfix:after,.clerafix:before{
+	content:"";/*在元素前后分别加入空白字符*/
+	display:table;/*使该元素按table样式渲染 相当于添加一个表格样式*/
+}
+
+.clearfix:after{
+	clear:both;/*让子集撑开父级高度*/
+}
+
+.clearfix{
+	zoom:1;/*兼容ie*/
+}
+/*向左浮动*/
+.fl{
+	float:left;
+}
+/*向右浮动*/
+.fr{
+	float:right;
+}
